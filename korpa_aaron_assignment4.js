@@ -75,8 +75,8 @@ var myLibrary = function() {
 	//			 2.1 --> 2.10
 	var fixedDecimals = function(numberToFix, numberOfDecimals) {
 		var numb = numberToFix;
-		numberToFix = parseFloat(numberToFix).toFixed(numberOfDecimals);
-		return numberToFix;
+		var fixedNum = parseFloat(numberToFix).toFixed(numberOfDecimals);
+		return fixedNum;
 	};
 	
 	//Problem 7: Fuzzy-match a number: is the number above or below a number within a 
@@ -92,8 +92,10 @@ var myLibrary = function() {
 
 	//Problem 9: Given a string version of a number, such as "42", return the value as an 
 	//			 actual Number data type, such as 42.
-	var varName = function(val) {
-	
+	var stringToNum = function(stringToConvert) {
+		var string1 = stringToConvert;
+		var string2 = parseInt(string1);
+			return string2;
 	};
 	
 	//ARRAY FUNCTIONS
@@ -118,7 +120,8 @@ var myLibrary = function() {
 	
 	return {
 		"isItPhoneNumber": isItPhoneNumber,
-		"fixedDecimals":   fixedDecimals
+		"fixedDecimals":   fixedDecimals,
+		"stringToNum":     stringToNum
 	};
 
 } // end my Library
@@ -127,13 +130,14 @@ var newLib = new myLibrary();
 
 // Outputs for testing
 
-//Problem 1
-console.log("Is this string a phone number? " + newLib.isItPhoneNumber("206-661-0812"));
+//Problem 1: Is this string a phone number?
+console.log(newLib.isItPhoneNumber("206-661-0812"));
 
-//Problem 6
-console.log("Here is your new fixed decimal number: " + newLib.fixedDecimals(3.1, 2));
+//Problem 6: Here is your new fixed decimal number
+console.log(newLib.fixedDecimals(3.14159, 3));
 
-
+//Problem 9: Here is your string as a number data type
+console.log(newLib.stringToNum("42"));
 
 
 
