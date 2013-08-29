@@ -5,7 +5,8 @@
 
 var myLibrary = function() {
 
-	//Strings
+	//STRING FUNCTIONS
+	
 	//Problem 1: Does a string follow a 123-456-7890 pattern like a phone number?
 	
 	var isItPhoneNumber = function(valueToBeChecked) {
@@ -45,63 +46,79 @@ var myLibrary = function() {
 			};
 	};
 
-	//Problem 2
+	//Problem 2: Does a string follow an aaa@bbb.ccc pattern like an email address?
 	var varName = function(val) {
 	
 	};
 
-	//Problem 3
+	//Problem 3: Is the string a URL (Does it start with an http:// or https://)?
 	var varName = function(val) {
 	
 	};
 
-	//Problem 4
+	//Problem 4: Title-case a string (split into words, then uppercase the first letter of 
+	//			 each word).
 	var varName = function(val) {
 	
 	};
 
-	//Problem 5
+	//Problem 5: Given a string that is a list of things separated by a given string, as 
+	// 			 well as another string separator, return a string with the first 
+	//			 separator changed to the second: "a,b,c" + "," + "/" --> "a/b/c".
+	var varName = function(val) {
+	
+	};
+	
+	//NUMBER FUNCTIONS
+	
+	//Problem 6: Format a number to use a specific number of decimal places as for money: 
+	//			 2.1 --> 2.10
+	var fixedDecimals = function(numberToFix, numberOfDecimals) {
+		var numb = numberToFix;
+		numberToFix = parseFloat(numberToFix).toFixed(numberOfDecimals);
+		return numberToFix;
+	};
+	
+	//Problem 7: Fuzzy-match a number: is the number above or below a number within a 
+	//			 certain percent?
 	var varName = function(val) {
 	
 	};
 
-	//Problem 6
-	var varName = function(val) {
-	
-	};
-	
-	//Problem 7
+	//Problem 8: Find the number of hours or days difference between two dates.
 	var varName = function(val) {
 	
 	};
 
-	//Problem 8
+	//Problem 9: Given a string version of a number, such as "42", return the value as an 
+	//			 actual Number data type, such as 42.
+	var varName = function(val) {
+	
+	};
+	
+	//ARRAY FUNCTIONS
+	
+	//Problem 10: Find the smallest value in an array than is greater than a given number.
 	var varName = function(val) {
 	
 	};
 
-	//Problem 9
+	//Problem 11: Find the total value of just the numbers in an array, even if some of 
+	//			  the items are not numbers.
 	var varName = function(val) {
 	
 	};
 
-	//Problem 10
-	var varName = function(val) {
-	
-	};
-
-	//Problem 11
-	var varName = function(val) {
-	
-	};
-
-	//Problem 12
+	//Problem 12: Given an array of objects and the name of a key, return the array sorted 
+	//			  by the value of that key in each of the objects: 
+	//			  "a" + [{a:2},{a:3},{a:1}] --> [{a:1},{a:2},{a:3}].
 	var varName = function(val) {
 	
 	};
 	
 	return {
-		"isItPhoneNumber": isItPhoneNumber
+		"isItPhoneNumber": isItPhoneNumber,
+		"fixedDecimals":   fixedDecimals
 	};
 
 } // end my Library
@@ -110,7 +127,52 @@ var newLib = new myLibrary();
 
 // Outputs for testing
 
+//Problem 1
 console.log("Is this string a phone number? " + newLib.isItPhoneNumber("206-661-0812"));
+
+//Problem 6
+console.log("Here is your new fixed decimal number: " + newLib.fixedDecimals(3.1, 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
