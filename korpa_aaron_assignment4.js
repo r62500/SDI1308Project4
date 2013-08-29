@@ -58,7 +58,17 @@ var myLibrary = function() {
 
 	//Problem 4: Title-case a string (split into words, then uppercase the first letter of 
 	//			 each word).
-	var varName = function(val) {
+	var capString = function(stringToBeCapped) {
+		var inputString = stringToBeCapped;
+		var numOfWords; 
+		var newString;
+		inputString = inputString.split(" ");
+		numOfWords = inputString.length;
+		newString = "";
+		for (var i = 0; i < numOfWords; i++){
+			newString = newString + inputString[i].substr(0,1).toUpperCase() + inputString[i].substr(1).toLowerCase() + " ";	
+		};
+		return newString;
 	
 	};
 
@@ -122,6 +132,7 @@ var myLibrary = function() {
 	
 	return {
 		"isItPhoneNumber": isItPhoneNumber,
+		"capString":       capString,
 		"sepReplace":      sepReplace,
 		"fixedDecimals":   fixedDecimals,
 		"stringToNum":     stringToNum
@@ -136,7 +147,10 @@ var newLib = new myLibrary();
 //Problem 1: Is this string a phone number?
 console.log(newLib.isItPhoneNumber("206-661-0812"));
 
-//Problem 5: Replace argument 2 with argument 3 within argument 1.
+//Problem 4: Convert string to cap first letter of each word and keep rest lowercase.
+console.log(newLib.capString("this is a strinG OF WORDS and Stuff"));
+
+//Problem 5: Replace argument 2 with argument 3 as separator for argument 1.
 console.log(newLib.sepReplace("a,b,c", ",", "/"));
 
 //Problem 6: Here is your new fixed decimal number
