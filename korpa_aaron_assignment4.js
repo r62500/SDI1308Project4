@@ -67,10 +67,9 @@ var myLibrary = function() {
 	var capString = function(stringToBeCapped) {
 		var inputString = stringToBeCapped;
 		var numOfWords; 
-		var newString;
+		var newString = "";
 		inputString = inputString.split(" ");
 		numOfWords = inputString.length;
-		newString = "";
 		for (var i = 0; i < numOfWords; i++){
 			newString = newString + inputString[i].substr(0,1).toUpperCase() + inputString[i].substr(1).toLowerCase() + " ";	
 		};
