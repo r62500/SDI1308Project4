@@ -29,18 +29,15 @@ var myLibrary = function() {
 							} else {
 								return false;
 							}
-							return true;
 						} else {
 							return false;
 						}
-						return true;
 					} else{
 						return false;
 					}
 				} else {
 					return false;
 				}
-				return true;
 			} else {
 				return false;
 			};
