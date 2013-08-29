@@ -65,8 +65,10 @@ var myLibrary = function() {
 	//Problem 5: Given a string that is a list of things separated by a given string, as 
 	// 			 well as another string separator, return a string with the first 
 	//			 separator changed to the second: "a,b,c" + "," + "/" --> "a/b/c".
-	var varName = function(val) {
-	
+	var sepReplace = function(stringWithSep, sepToReplace, replacementSep) {
+		var string1 = stringWithSep;
+		var string2 = string1.split(sepToReplace).join(replacementSep);
+		return string2;
 	};
 	
 	//NUMBER FUNCTIONS
@@ -120,6 +122,7 @@ var myLibrary = function() {
 	
 	return {
 		"isItPhoneNumber": isItPhoneNumber,
+		"sepReplace":      sepReplace,
 		"fixedDecimals":   fixedDecimals,
 		"stringToNum":     stringToNum
 	};
@@ -132,6 +135,9 @@ var newLib = new myLibrary();
 
 //Problem 1: Is this string a phone number?
 console.log(newLib.isItPhoneNumber("206-661-0812"));
+
+//Problem 5: Replace argument 2 with argument 3 within argument 1.
+console.log(newLib.sepReplace("a,b,c", ",", "/"));
 
 //Problem 6: Here is your new fixed decimal number
 console.log(newLib.fixedDecimals(3.14159, 3));
