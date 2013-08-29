@@ -52,8 +52,17 @@ var myLibrary = function() {
 	};
 
 	//Problem 3: Is the string a URL (Does it start with an http:// or https://)?
-	var varName = function(val) {
-	
+	var checkUrl = function(stringToBeChecked) {
+		var string1 = stringToBeChecked;
+		var sub1 = string1.substring(0,7);
+		var sub2 = string1.substring(0,8);
+			if (string1.charAt(0) + string1.charAt(1) + string1.charAt(2) + string1.charAt(3) + string1.charAt(4) + string1.charAt(5) + string1.charAt(6) === "http://") {
+				return true;
+			} else if (string1.charAt(0) + string1.charAt(1) + string1.charAt(2) + string1.charAt(3) + string1.charAt(4) + string1.charAt(5) + string1.charAt(6) + string1.charAt(7) === "https://") {
+				return true;
+			} else {
+				return false;
+			}	
 	};
 
 	//Problem 4: Title-case a string (split into words, then uppercase the first letter of 
@@ -132,6 +141,7 @@ var myLibrary = function() {
 	
 	return {
 		"isItPhoneNumber": isItPhoneNumber,
+		"checkUrl":        checkUrl,
 		"capString":       capString,
 		"sepReplace":      sepReplace,
 		"fixedDecimals":   fixedDecimals,
@@ -146,6 +156,9 @@ var newLib = new myLibrary();
 
 //Problem 1: Is this string a phone number?
 console.log(newLib.isItPhoneNumber("206-661-0812"));
+
+//Problem 3: Does this string start with http:// or https://
+console.log(newLib.checkUrl("http://blahblah"));
 
 //Problem 4: Convert string to cap first letter of each word and keep rest lowercase.
 console.log(newLib.capString("this is a strinG OF WORDS and Stuff"));
