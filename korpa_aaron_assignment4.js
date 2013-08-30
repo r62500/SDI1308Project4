@@ -43,11 +43,6 @@ var myLibrary = function() {
 			};
 	};
 
-	//Problem 2: Does a string follow an aaa@bbb.ccc pattern like an email address?
-	var varName = function(val) {
-	
-	};
-
 	//Problem 3: Is the string a URL (Does it start with an http:// or https://)?
 	var checkUrl = function(stringToBeChecked) {
 		var string1 = stringToBeChecked;
@@ -96,17 +91,6 @@ var myLibrary = function() {
 		return fixedNum;
 	};
 	
-	//Problem 7: Fuzzy-match a number: is the number above or below a number within a 
-	//			 certain percent?
-	var varName = function(val) {
-	
-	};
-
-	//Problem 8: Find the number of hours or days difference between two dates.
-	var varName = function(val) {
-	
-	};
-
 	//Problem 9: Given a string version of a number, such as "42", return the value as an 
 	//			 actual Number data type, such as 42.
 	var stringToNum = function(stringToConvert) {
@@ -115,25 +99,6 @@ var myLibrary = function() {
 			return string2;
 	};
 	
-	//ARRAY FUNCTIONS
-	
-	//Problem 10: Find the smallest value in an array than is greater than a given number.
-	var varName = function(val) {
-	
-	};
-
-	//Problem 11: Find the total value of just the numbers in an array, even if some of 
-	//			  the items are not numbers.
-	var varName = function(val) {
-	
-	};
-
-	//Problem 12: Given an array of objects and the name of a key, return the array sorted 
-	//			  by the value of that key in each of the objects: 
-	//			  "a" + [{a:2},{a:3},{a:1}] --> [{a:1},{a:2},{a:3}].
-	var varName = function(val) {
-	
-	};
 	
 	return {
 		"isItPhoneNumber": isItPhoneNumber,
